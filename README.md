@@ -1,4 +1,8 @@
 # SuitUp
+
+
+Logo made with Logomakr.com 
+
 Java code: SuitUp/Code/SuitUp/app/src/main/java/com/example/akila/myapplication/ 
 
 XML: SuitUp/Code/SuitUp/app/src/main/res/layout/
