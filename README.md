@@ -1,6 +1,5 @@
 # SuitUp
-
-
+![alt text] https://github.com/sriniva5/SuitUp/blob/master/images/Logomakr_9cX6PG.png
 Logo made with Logomakr.com 
 
 Java code: SuitUp/Code/SuitUp/app/src/main/java/com/example/akila/myapplication/ 
