@@ -1,3 +1,30 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">SuitUp</string>
+    <string name="desc">Image description</string>
+    <string name="sign_up_message">Sign up to SuitUp</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_surname">Last Name</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_retype_password">Confirm Password</string>
+    <string name="hint_address1">Address Line 1</string>
+    <string name="hint_address2">Address Line 2</string>
+    <string name="hint_zipcode">Zipcode</string>
+    <string name="hint_state">State</string>
+    <string name="hint_city">City</string>
+    <string name="text_login">Login</string>
+    <string name="text_register">Register</string>
+    <string name="error_name">Enter your first name</string>
+    <string name="error_surname">Enter your last name</string>
+    <string name="error_email">Enter a valid email</string>
+    <string name="error_address">Enter a valid address</string>
+    <string name="error_zip">Enter a valid zipcode</string>
+    <string name="error_city">Enter a valid city</string>
+    <string name="error_state">Select a state</string>
+    <string name="error_password">Enter a password</string>
+    <string name="register_success">Registration successful</string>
+    <string name="not_member">Register here to donate and receive work attire!</string>
+    <string name="email_exists">There is an account using this email</string>
+    <string name="password_doesnt_match">Password invalid</string>
+    <string name="email_password_doesnt_match">Invalid email or password</string>
 </resources>
