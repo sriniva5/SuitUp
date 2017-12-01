@@ -27,4 +27,15 @@
     <string name="email_exists">There is an account using this email</string>
     <string name="password_doesnt_match">Password invalid</string>
     <string name="email_password_doesnt_match">Invalid email or password</string>
+    <string name="donation_button">Donate attire</string>
+    <string name="size_warning">Please enter in terms of US sizes</string>
+    <string name="search_clothing_button">Search</string>
+    <string name="recommendation">Recommendations</string>
+    <string name="hint_donation">Donate</string>
+    <string name="hint_item_name">Clothing Type (ie: suit, blouse)</string>
+    <string name="hint_description">Description</string>
+    <string name="hint_size">Size</string>
+    <string name="buttonDonate">Donate item</string>
+    <string name="error_db">Please enter valid interrupt</string>
+    <string name="donation_success">Donation created</string>
 </resources>

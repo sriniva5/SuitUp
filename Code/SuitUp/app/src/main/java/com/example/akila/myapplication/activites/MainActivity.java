@@ -56,10 +56,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void initViews(){
         nestedScrollView = (NestedScrollView)findViewById(R.id.nestedScrollView);
+
         textInputLayoutEmail = (TextInputLayout)findViewById(R.id.textInputLayoutEmail);
         textInputLayoutPassword = (TextInputLayout)findViewById(R.id.textInputLayoutPassword);
+
         textInputEditTextEmail = (TextInputEditText)findViewById(R.id.textInputEditTextEmail);
         textInputEditTextPassword = (TextInputEditText)findViewById(R.id.textInputEditTextPassword);
+
         appCompatButtonLogin = (AppCompatButton)findViewById(R.id.appCompatButtonLogin);
         textViewRegister = (AppCompatTextView)findViewById(R.id.textViewRegister);
     }
@@ -95,14 +98,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(!inputValidation.isInputFilled(textInputEditTextPassword, textInputLayoutPassword, getString(R.string.error_password)))
             return;
         if(dbHelper.checkUser(textInputEditTextEmail.getText().toString().trim(), textInputEditTextPassword.getText().toString().trim())){
-            Intent accountIntent = new Intent(MainActivity.this, UsersActivity.class);
+            Intent accountIntent = new Intent(activity, UsersActivity.class);
             accountIntent.putExtra("EMAIL", textInputEditTextEmail.getText().toString().trim());
             emptyInputEditText();
             startActivity(accountIntent);
         }else{
-            Snackbar.make(nestedScrollView, getString(R.string.error_password), Snackbar.LENGTH_LONG).show();
+            Snackbar.make(nestedScrollView, getString(R.string.email_password_doesnt_match), Snackbar.LENGTH_LONG).show();
         }
-
     }
 
     private void emptyInputEditText() {

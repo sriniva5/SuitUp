@@ -1,7 +1,7 @@
 package com.example.akila.myapplication.model;
 
 /**
- * Created by Akila on 11/27/17.
+ * Model representation of the application user
  */
 
 public class User {
@@ -10,11 +10,9 @@ public class User {
     private String last_name;
     private String email;
     private String add1;
-    private String add2;
     private String city;
     private String state;
     private String zipcode;
-    private String gender;
     private String password;
 
     public int getId(){
@@ -57,14 +55,6 @@ public class User {
         this.add1=add1;
     }
 
-    public String getAdd2(){
-        return add2;
-    }
-
-    public void setAdd2(String add2){
-        this.add2=add2;
-    }
-
     public String getCity(){
         return city;
     }
@@ -87,14 +77,6 @@ public class User {
 
     public void setZipcode(String zipcode){
         this.zipcode=zipcode;
-    }
-
-    public String getGender(){
-        return gender;
-    }
-
-    public void setGender(String gender){
-        this.gender=gender;
     }
 
     public String getPassword(){

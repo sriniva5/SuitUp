@@ -6,21 +6,13 @@ import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
-import android.content.Intent;
-import android.widget.AdapterView.OnItemSelectedListener;
 import android.support.v7.widget.AppCompatButton;
-import android.support.v7.widget.AppCompatSpinner;
 import android.view.View;
 
 import com.example.akila.myapplication.R;
 import com.example.akila.myapplication.helper.InputValidation;
 import com.example.akila.myapplication.sql.DatabaseHelper;
 import com.example.akila.myapplication.model.User;
-
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -45,7 +37,6 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
     private TextInputLayout textLayoutSurname;
     private TextInputLayout textLayoutEmail;
     private TextInputLayout textLayoutAdd1;
-    private TextInputLayout textLayoutAdd2;
     private TextInputLayout textLayoutCity;
     private TextInputLayout textLayoutZipcode;
     private TextInputLayout textLayoutPassword;
@@ -56,7 +47,6 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
     private TextInputEditText editTextSurname;
     private TextInputEditText editTextEmail;
     private TextInputEditText editTextAdd1;
-    private TextInputEditText editTextAdd2;
     private TextInputEditText editTextCity;
     private TextInputEditText editTextZipcode;
     private TextInputEditText editTextState;
@@ -77,7 +67,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
         setContentView(R.layout.activity_signup);
         getSupportActionBar().hide();
 
-        //States to fill the spinner
+        //States to fill the spinner; SPINNER IS NO LONGER NEEDED
         ArrayList<String> categories = new ArrayList<String>();
         categories.add("AL");
         categories.add("AK");
@@ -138,13 +128,23 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
 
     }
 
+    //Initialize views
     private void initViews(){
         scrollView = (NestedScrollView)findViewById(R.id.scroll_register);
+
+        textLayoutName = (TextInputLayout)findViewById(R.id.textInputLayoutName);
+        textLayoutSurname = (TextInputLayout)findViewById(R.id.textInputLayoutSurname);
+        textLayoutEmail = (TextInputLayout)findViewById(R.id.textInputLayoutEmail);
+        textLayoutAdd1 = (TextInputLayout)findViewById(R.id.textInputLayoutAddress1);
+        textLayoutCity = (TextInputLayout)findViewById(R.id.textInputLayoutCity);
+        textLayoutState = (TextInputLayout)findViewById(R.id.textLayoutState);
+        textLayoutZipcode = (TextInputLayout)findViewById(R.id.textInputLayoutZipcode);
+        textLayoutPassword = (TextInputLayout)findViewById(R.id.textInputLayoutPassword);
+        textLayoutConfirmPassword = (TextInputLayout)findViewById(R.id.textInputLayoutConfirmPassword);
 
         editTextName = (TextInputEditText)findViewById(R.id.username);
         editTextSurname = (TextInputEditText)findViewById(R.id.surname);
         editTextAdd1 = (TextInputEditText)findViewById(R.id.address1);
-        editTextAdd2 = (TextInputEditText)findViewById(R.id.address2);
         editTextEmail = (TextInputEditText)findViewById(R.id.email);
         editTextCity = (TextInputEditText)findViewById(R.id.city);
         editTextZipcode = (TextInputEditText)findViewById(R.id.zipcode);
@@ -202,14 +202,19 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
         if(!dbHelper.checkUser(editTextEmail.getText().toString().trim())){
             user.setFirst_name(editTextName.getText().toString().trim());
             user.setLast_name(editTextSurname.getText().toString().trim());
-            user.setEmail(editTextAdd1.getText().toString().trim());
-            user.setAdd2(editTextAdd2.getText().toString().trim());
+            user.setEmail(editTextEmail.getText().toString().trim());
+            user.setAdd1(editTextAdd1.getText().toString().trim());
             user.setCity(editTextCity.getText().toString().trim());
             user.setZipcode(editTextZipcode.toString().trim());
             user.setPassword(editTextPassword.getText().toString().trim());
             user.setState(editTextState.getText().toString().trim());
 
             dbHelper.addUser(user);
+
+            Snackbar.make(scrollView, getString(R.string.register_success), Snackbar.LENGTH_LONG).show();
+            emptyEditText();
+        }else{
+            Snackbar.make(scrollView, getString(R.string.email_exists), Snackbar.LENGTH_LONG).show();
         }
 
     }
@@ -218,8 +223,12 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
         editTextName.setText(null);
         editTextSurname.setText(null);
         editTextAdd1.setText(null);
-        editTextAdd2.setText(null);
         editTextZipcode.setText(null);
+        editTextPassword.setText(null);
+        editTextConfirmPassword.setText(null);
+        editTextCity.setText(null);
+        editTextState.setText(null);
+        editTextEmail.setText(null);
     }
 }
 
