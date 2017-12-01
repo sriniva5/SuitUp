@@ -15,39 +15,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Dashboard"
-            android:parentActivityName=".activites.MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activites.MainActivity" />
-        </activity>
-        <activity android:name=".activites.SignUp">
-            android:parentActivityName=".MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activites.MainActivity"
-                android:screenOrientation="portrait" />
-        </activity>
 
-        <activity android:name=".activites.UsersActivity">
-            android:screenOrientation="portrait"
-        </activity>
+        <activity android:name=".activites.SignUp"
+            android:screenOrientation="portrait" />
 
-        <activity android:name=".Search"
-            android:parentActivityName=".Dashboard">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Dashboard"
-                android:screenOrientation="portrait" />
-        </activity>
-        <activity android:name=".Donation"
-            android:parentActivityName=".Dashboard">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Dashboard"
-                android:screenOrientation="portrait" />
-        </activity>
+        <activity android:name=".activites.UsersActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

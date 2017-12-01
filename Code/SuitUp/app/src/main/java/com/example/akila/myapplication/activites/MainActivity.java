@@ -52,8 +52,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         initViews();
         initListeners();
         initObjects();
-
-
     }
 
     private void initViews(){
@@ -83,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 verifyFromSQLite();
                 break;
             case R.id.textViewRegister:
-                Intent intentRegister = new Intent();
+                Intent intentRegister = new Intent(MainActivity.this, SignUp.class);
                 startActivity(intentRegister);
                 break;
         }
@@ -97,7 +95,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(!inputValidation.isInputFilled(textInputEditTextPassword, textInputLayoutPassword, getString(R.string.error_password)))
             return;
         if(dbHelper.checkUser(textInputEditTextEmail.getText().toString().trim(), textInputEditTextPassword.getText().toString().trim())){
-            Intent accountIntent = new Intent(activity, UsersActivity.class);
+            Intent accountIntent = new Intent(MainActivity.this, UsersActivity.class);
             accountIntent.putExtra("EMAIL", textInputEditTextEmail.getText().toString().trim());
             emptyInputEditText();
             startActivity(accountIntent);
