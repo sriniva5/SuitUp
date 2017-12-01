@@ -1,8 +1,14 @@
 package com.example.akila.myapplication.helper;
 
-/**
- * Created by Akila on 11/27/17.
- */
+// Name: Ananya Srinivasan
+// Course: CSC 415
+// Semester: Fall 2017
+// Instructor: Dr. Pulimood
+// SuitUp
+// Description: An android app for work clothing donations
+// Filename: InputValidation
+// Description: Validates input for registration
+// Last modified on: 30 November 2017
 
 import android.app.Activity;
 import android.content.Context;
@@ -13,6 +19,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 
+//Note: This implementation was partly inspired by this SQLite Tutorial: https://www.youtube.com/watch?v=mVIZFV0Ttds
 public class InputValidation {
     private Context context;
 

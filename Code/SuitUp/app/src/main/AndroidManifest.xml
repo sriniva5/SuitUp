@@ -21,6 +21,7 @@
 
         <activity android:name=".activites.UsersActivity"
             android:screenOrientation="portrait"/>
+
     </application>
 
 </manifest>

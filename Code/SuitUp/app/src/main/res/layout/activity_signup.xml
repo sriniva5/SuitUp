@@ -88,24 +88,9 @@
                 android:ems="10"
                 android:layout_marginBottom="19dp"
                 android:layout_gravity="center_horizontal"
+                android:maxLines="2"
                 android:id="@+id/address1"
                 android:hint="@string/hint_address1" />
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textInputLayoutAddress2">
-
-            <android.support.design.widget.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:ems="10"
-                android:layout_marginBottom="19dp"
-                android:layout_gravity="center_horizontal"
-                android:id="@+id/address2"
-                android:hint="@string/hint_address2" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -180,7 +165,7 @@
                 android:layout_marginBottom="19dp"
                 android:hint="@string/hint_retype_password"
                 android:id="@+id/password2"
-                android:inputType="text"/>
+                android:inputType="textPassword"/>
         </android.support.design.widget.TextInputLayout>
 
 
