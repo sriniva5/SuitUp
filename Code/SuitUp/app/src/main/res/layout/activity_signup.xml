@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_sign_up"
+    android:id="@+id/scroll_register"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -9,82 +9,188 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.akila.myapplication.SignUp">
+    tools:context="com.example.akila.myapplication.activites.SignUp">
 
-    <TextView
-        android:text="Sign up."
-        android:textSize="30dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:id="@+id/sign_up1"/>
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:text="SuitUp."
-        android:textSize="30dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="6dp"
-        android:id="@+id/sign_up2"/>
+        <TextView
+            android:text="@string/sign_up_message"
+            android:textSize="30sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:id="@+id/sign_up1"/>
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="19dp"
-        android:id="@+id/username"
-        android:hint="Username"  />
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayoutName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:layout_gravity="center_horizontal"
-        android:id="@+id/password"
-        android:hint="Password" />
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/username"
+                android:maxLines="1"
+                android:hint="@string/hint_name"  />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textInputLayoutSurname">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/surname"
+                android:maxLines="1"
+                android:hint="@string/hint_surname" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textInputLayoutEmail">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/email"
+                android:maxLines="1"
+                android:hint="@string/hint_email" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textInputLayoutAddress1">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:layout_marginBottom="19dp"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/address1"
+                android:hint="@string/hint_address1" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textInputLayoutAddress2">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:layout_marginBottom="19dp"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/address2"
+                android:hint="@string/hint_address2" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/textInputLayoutCity">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginBottom="19dp"
+                android:hint="@string/hint_city"
+                android:id="@+id/city"
+                android:inputType="text"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textInputLayoutZipcode">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:maxLength="5"
+                android:layout_marginBottom="19dp"
+                android:hint="@string/hint_zipcode"
+                android:id="@+id/zipcode"
+                android:inputType="numberPassword"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textLayoutState">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_state"
+                android:id="@+id/state"
+                android:maxLength="2"
+                android:ems="10">
+            </android.support.design.widget.TextInputEditText>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textInputLayoutPassword">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginBottom="19dp"
+                android:hint="@string/hint_password"
+                android:id="@+id/password1"
+                android:inputType="textPassword"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textInputLayoutConfirmPassword">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginBottom="19dp"
+                android:hint="@string/hint_retype_password"
+                android:id="@+id/password2"
+                android:inputType="text"/>
+        </android.support.design.widget.TextInputLayout>
 
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="19dp"
-        android:hint="Email"
-        android:id="@+id/email"
-        android:inputType="textEmailAddress" />
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/signupbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="@string/text_register" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:ems="5"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="19dp"
-        android:hint="Zipcode"
-        android:id="@+id/zipcode"
-        android:inputType="number" />
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="91dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:ems="5" />
-
-    <Button
-        android:id="@+id/signupbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:text="Sign up" />
-</LinearLayout>
+    </android.support.v7.widget.LinearLayoutCompat>
+</android.support.v4.widget.NestedScrollView>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+    android:id="@+id/nestedScrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -9,59 +9,66 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.akila.myapplication.MainActivity"
-    android:weightSum="1">
+    android:weightSum="1"
+    tools:context="com.example.akila.myapplication.activites.MainActivity">
 
-    <TextView
-        android:text="SuitUp"
-        android:textSize="70dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="56dp"
-        android:id="@+id/login_logo"/>
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:text="Give a suit, make a difference."
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:id="@+id/login_description"
-        android:layout_gravity="center_horizontal"/>
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/black_logo" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="19dp"
-        android:id="@+id/username"
-        android:hint="Username" />
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayoutEmail"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:layout_gravity="center_horizontal"
-        android:id="@+id/password"
-        android:hint="Password" />
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/textInputEditTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_email"
+                android:maxLines="1"
+                android:inputType="text"/>
+        </android.support.design.widget.TextInputLayout>
 
-    <Button
-        android:text="Log in"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:id="@+id/log_in" />
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayoutPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
 
-    <Button
-        android:text="Sign up"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:id="@+id/sign_up" />
-</LinearLayout>
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/textInputEditTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_password"
+                android:maxLines="1"
+                android:inputType="textPassword"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/appCompatButtonLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/text_login"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textViewRegister"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/not_member"/>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.v4.widget.NestedScrollView>

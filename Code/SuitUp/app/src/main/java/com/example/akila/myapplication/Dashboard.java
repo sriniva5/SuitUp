@@ -43,13 +43,13 @@ public class Dashboard extends AppCompatActivity {
 
         //Preconditions: The user is on the dashboard and clicks the donate button to donate items
         //Postcondition: The user is redirected to the donation page
-        donate.setOnClickListener(new View.OnClickListener(){
+       /* donate.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent i = new Intent(Dashboard.this, Donation.this);
+                Intent i = new Intent(Dashboard.this, Search.this);
                 startActivity(i);
             }
-        });
+        });*/
     }
 
     @Override
