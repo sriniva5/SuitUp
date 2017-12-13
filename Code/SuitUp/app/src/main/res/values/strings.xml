@@ -38,4 +38,8 @@
     <string name="buttonDonate">Donate item</string>
     <string name="error_db">Please enter valid interrupt</string>
     <string name="donation_success">Donation created</string>
+    <string name="hint_word">Keyword</string>
+    <string name="search_results">Enter query in searchbar and click search</string>
+    <string name="no_results">No results</string>
+    <string name="button_search">Search</string>
 </resources>

@@ -27,7 +27,6 @@ import com.example.akila.myapplication.sql.DonationHelper;
 public class Donation extends AppCompatActivity implements View.OnClickListener {
     private final AppCompatActivity activity = Donation.this;
     private NestedScrollView scrollView;
-    private AppCompatButton donationbutton;
 
     //Define layouts
     private TextInputLayout itemLayout;

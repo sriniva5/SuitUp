@@ -10,6 +10,15 @@ public class Clothing {
     private String description;
     private int size;
 
+    public Clothing(){}
+
+    public Clothing(int id, String item, String description, int size){
+        this.id = id;
+        this.item = item;
+        this.description = description;
+        this.size = size;
+    }
+
     public int getId(){return id;}
     public void setId(int id){this.id=id;}
     public String getItem(){return item;}

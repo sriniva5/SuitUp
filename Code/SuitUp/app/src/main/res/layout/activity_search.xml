@@ -1,25 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.akila.myapplication.Search">
+    tools:context="com.example.akila.myapplication.activites.Search">
 
-    <SearchView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/textView2"
+    <EditText
+        android:id="@+id/search_word"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Insert advanced search here" />
+        android:fontFamily="sans-serif-light"
+        android:hint="@string/hint_word"
+        android:inputType="textAutoComplete"
+        android:textSize="18sp"  />
 
-    <ExpandableListView
+    <Button
+        android:id="@+id/button_search"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:onClick="showResult"
+        android:text="@string/button_search" />
 
-    <ExpandableListView
+    <TextView
+        android:id="@+id/search_result"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:hint="@string/search_results"/>
+
 </LinearLayout>
